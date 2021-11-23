@@ -44,7 +44,6 @@ const About = ({users}) => {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
     return {
         users: state.firestore.ordered.users,
     }

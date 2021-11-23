@@ -48,8 +48,6 @@ const Home = ({post, createPost, auth, signOut, users, deletePost}) => {
             setTitle(e.target.value)
             :
             setContent(e.target.value)
-
-        console.log(e.target.name)
     } 
 
     const onClick = () => {
@@ -83,11 +81,7 @@ const Home = ({post, createPost, auth, signOut, users, deletePost}) => {
     }
 
     const deleteItemHandler = ( postKey) => {
-        // const items = [...post];
-        // items.splice(index, 1);
-        console.log("delete")
         deletePost(postKey);
-        // setStudents(items);
     }
 
     return (
@@ -132,7 +126,6 @@ const Home = ({post, createPost, auth, signOut, users, deletePost}) => {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
     return {
         post: state.firestore.ordered.post,
         users: state.firestore.ordered.users,

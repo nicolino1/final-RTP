@@ -25,8 +25,6 @@ const Login = ({changeTheme, signIn, authError, auth}) => {
             setUser(e.target.value)
             :
             setPassword(e.target.value)
-
-        console.log(e.target.name)
     } 
 
     const submitLogin = (e) => {
@@ -66,7 +64,6 @@ const Login = ({changeTheme, signIn, authError, auth}) => {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state)
     return {
         authError: state.auth.authError,
         auth: state.firebase.auth

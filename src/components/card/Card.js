@@ -5,7 +5,6 @@ import  ThemeContext  from '../../theme-context';
 
 const Card = ({id , isAdmin, title= "hola", content= "hola", image= loginImage, onClick, deleteCard}) => {
     const theme = useContext(ThemeContext);
-    console.log(isAdmin)
 
     return (
         <CardStyle theme = {theme} id={id} key={id}>

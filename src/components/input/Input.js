@@ -4,7 +4,7 @@ import  ThemeContext  from '../../theme-context';
 
 const Input = ({placeholder, onChange, type, value }) => {
     const theme = useContext(ThemeContext);
-    console.log(value)
+
     return (
         <InputStyle type={type} theme={theme}>
             {
