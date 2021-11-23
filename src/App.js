@@ -7,11 +7,12 @@ import { Routes, Route, Link } from "react-router-dom";
 import ThemeContext, {themes} from './theme-context';
 import { useEffect, useState } from 'react';
 
+
 function App() {
-  const [theme, setTheme] = useState(localStorage.getItem('theme'));
+  const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light');
 
   const changeTheme = () => {
-    localStorage.getItem('theme') === 'light' ? 
+    theme === 'light' ? 
       localStorage.setItem('theme', 'dark') 
       : 
       localStorage.setItem('theme', 'light')
@@ -25,7 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login changeTheme={changeTheme}/>} />
         <Route path="home" element={<Home />} />
-        <Route path="about" element={<About />} />
+        <Route path="about/:id" element={<About />} />
       </Routes>
     </ThemeContext.Provider>
   );

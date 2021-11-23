@@ -10,6 +10,7 @@ export const themes = {
         backgroundColor: 'white',
         cardfirstbutton: 'coral',
         cardsecondbutton: 'skyblue',
+        cardBackground: 'rgba(250,250, 255, 1 )'
     },
     dark: {
         color: 'coral',
@@ -20,6 +21,7 @@ export const themes = {
         backgroundColor: 'rgba(50, 50, 50, 1)',
         cardfirstbutton: 'darkred',
         cardsecondbutton: 'purple',
+        cardBackground: 'rgba(45,40, 40, 1 )'
     }
 }
 

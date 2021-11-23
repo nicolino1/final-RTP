@@ -2,9 +2,9 @@ import React, {useContext} from 'react';
 import InputStyle from './Input.style';
 import  ThemeContext  from '../../theme-context';
 
-const Input = ({placeholder, onChange, type}) => {
+const Input = ({placeholder, onChange, type, value }) => {
     const theme = useContext(ThemeContext);
-
+    console.log(value)
     return (
         <InputStyle type={type} theme={theme}>
             {
@@ -14,6 +14,7 @@ const Input = ({placeholder, onChange, type}) => {
                 onChange={onChange} 
                 placeholder={placeholder}
                 type={type}
+                value={value}
                 >
 
                 </input> 
@@ -25,6 +26,7 @@ const Input = ({placeholder, onChange, type}) => {
                 onChange={onChange} 
                 placeholder={placeholder}
                 type={type}
+                value={value}
                 ></textarea>
             }
 

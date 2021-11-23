@@ -11,11 +11,15 @@ const InputStyle = styled.div`
         height: 5%;
         outline: none;
         color: ${props => props.theme.color};
-        font-size: 20px;
+        font-size: 1.2rem;
         font-weight: bold;
         padding: 10px;
         ${props => props.type === "textarea" && 'padding-bottom: 100px;'}
         resize: none;
+
+        @media (max-width: 800px) {
+            font-size: 0.8rem;
+         }
 
         &:focus {
             border-bottom: 2px solid rgba(200, 200, 200, 1);

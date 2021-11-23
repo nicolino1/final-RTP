@@ -9,6 +9,9 @@ const CardStyle = styled.div`
     overflow: hidden;
     min-height: 200px;
     margin-top: 20px;
+    background-color: ${props => props.theme.cardBackground};
+    padding: 5px;
+    box-sizing: border-box;
 
     @media (max-width: 800px) {
         flex-direction: column;
@@ -17,6 +20,7 @@ const CardStyle = styled.div`
 
     &:hover {
         box-shadow: 10px 10px 2px 1px ${props => props.theme.shadowColor};
+        transform: translateY(-3px);
     }
 
     & > div:first-child {
@@ -40,10 +44,18 @@ const CardStyle = styled.div`
 
         & > h1 {
             font-size: 1.5rem;
+
+            @media (max-width: 800px) {
+                font-size: 1rem;
+             }
         }
 
         & > p {
             font-size: 1rem;
+
+            @media (max-width: 800px) {
+                font-size: 0.7rem;
+             }
         }
     }
 

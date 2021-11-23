@@ -3,11 +3,12 @@ import CardStyle from './Card.style';
 import loginImage from '../../assets/loginImage.jpg';
 import  ThemeContext  from '../../theme-context';
 
-const Card = ({title= "hola", content= "hola", image= loginImage, onClick}) => {
+const Card = ({id , isAdmin, title= "hola", content= "hola", image= loginImage, onClick, deleteCard}) => {
     const theme = useContext(ThemeContext);
+    console.log(isAdmin)
 
     return (
-        <CardStyle theme = {theme}>
+        <CardStyle theme = {theme} id={id} key={id}>
             <div>
                 <img src={image} />
             </div>
@@ -20,7 +21,7 @@ const Card = ({title= "hola", content= "hola", image= loginImage, onClick}) => {
                 </p>
             </div>
             <div>
-                <button>delete</button>
+                {isAdmin && <button onClick={() => deleteCard(id)}>delete</button>}
                 <button onClick={onClick}>details</button>
             </div>
         </CardStyle>

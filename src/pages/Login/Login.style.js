@@ -55,8 +55,8 @@ const LoginStyle = styled.div`
     @media (max-width: 800px) {
         flex-direction: column-reverse;
 
-        & > div:last-child {
-            flex-direction: column-reverse;
+        & > div:nth-child(2) {
+            flex-direction: row;
 
         }
         
